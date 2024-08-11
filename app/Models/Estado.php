@@ -15,4 +15,9 @@ class Estado extends Model
     {
         return $this->belongsTo(Pais::class);
     }
+    
+    public function cidade()
+    {
+        return $this->hasOne(Cidade::class);
+    }
 }

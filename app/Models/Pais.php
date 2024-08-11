@@ -9,10 +9,12 @@ class Pais extends Model
 {
     use HasFactory;
     
+    protected $table = 'paises';
+    
     protected $fillable = ['nome'];
     
-    public function estados()
+    public function estado()
     {
-        return $this->hasMany(Estado::class);
+        return $this->hasOne(Estado::class);
     }
 }
